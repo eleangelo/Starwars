@@ -16,8 +16,10 @@
 }
 body {
   font-family: "Roboto", sans-serif;
-  background: #070506 url(../images/main-bg.jpg) top right 180% no-repeat ;
+  background: #010101 url(../images/main-bg.jpg) top right -170% no-repeat ;
   color: #ffffff;
+  background-size: contain;
+  background-attachment: fixed;
 }
 .container {
   width: 90%;
@@ -152,13 +154,81 @@ body {
   line-height: 150%;
   margin: 0;
 }
-.slider-rating {
+.slider-rating-label {
   font-size: 13px;
   line-height: 150%;
+  margin-right: 12px;
+  
+}
+.star{
+  display: inline-block;
+  background: url(../images/star.svg) no-repeat center;
+  width: 12px;
+  height: 12px;
+}
+.star-o {
+  display: inline-block;
+  background: url(../images/star-o.svg) no-repeat center;
+  width: 12px;
+  height: 12px;
 }
 .slider-img {
   position: absolute;
   left: 0;
   top: 0;
   z-index: -1;
+}
+.slider-nav-left {
+  width: 32px;
+  height: 32px;
+  border: none;
+  margin-right: 15px;
+  background: transparent url(../images/left-arrow.svg) no-repeat center;
+  cursor: pointer;
+  
+}
+.slider-nav-right {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent url(../images/right-arrow.svg) no-repeat center;
+  cursor: pointer;
+}
+.slider-nav-left span,
+.slider-nav-right span {
+  display: none;
+}
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 45px;
+   
+  }
+  .hero-subtitle {
+    font-size: 35px;
+    line-height: 120px;
+  }
+  .hero-description {
+    font-size: 16px;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav {
+    margin-top: 10px;
+  }
+  
+}
+@media (max-width: 400px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .nav-link {
+    margin-bottom: 10px;
+  }
+  .hero {
+    margin-top: 20px
+  }
 }
